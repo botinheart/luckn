@@ -45,11 +45,24 @@ window.settings = {
     introduction: '我们是一个追求更可靠、安全、高效且高性价比的互联网接入方案。',
     // Crisp 客服系统网站 ID
     crisp_id: '',
-    // 客户端配置，只能修改 link 和 items的true/false
+    // 客户端配置
+	// apps 内根据需要自行添加修改
+	// items 只能修改true/false
     clients: [
         {
             name: "iOS",
-            link: "https://apps.apple.com/app/id1234567890",
+            apps: [
+                {
+                    name: "Shadowrocket",
+                    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/be/0e/ec/be0eecda-9042-7bdd-b720-8e89ceb0dcf7/AppIcon-0-0-1x_U007epad-0-1-85-220.png/230x0w.webp",
+                    link: "https://apps.apple.com/us/app/shadowrocket/id932747118",
+                },
+                {
+                    name: "Loon",
+                    icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/13/42/d7/1342d7d8-7cfd-4ef9-8dd7-544027bd5c71/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/230x0w.webp",
+                    link: "https://apps.apple.com/us/app/loon/id1373567447",
+                },
+            ],
             items: {
                 Shadowrocket: true,
                 Loon: true,
@@ -57,7 +70,18 @@ window.settings = {
         },
         {
             name: "Android",
-            link: "https://apps.apple.com/app/id1234567890",
+            apps: [
+                {
+                    name: "Clash Meta",
+                    icon: "https://clashmeta.org/wp-content/uploads/2023/07/cropped-favicon-50x50.png",
+                    link: "https://github.com/MetaCubeX/ClashMetaForAndroid",
+                },
+                {
+                    name: "FlClash",
+                    icon: "https://getflclash.net/wp-content/uploads/2024/10/logo-150x150.webp",
+                    link: "https://github.com/chen08209/FlClash",
+                },
+            ],
             items: {
                 "Clash Meta": true,
                 FlClash: true,
@@ -65,7 +89,18 @@ window.settings = {
         },
         {
             name: "Windows",
-            link: "https://apps.apple.com/app/id1234567890",
+            apps: [
+                {
+                    name: "Clash Verge",
+                    icon: "https://avatars.githubusercontent.com/u/152534467?s=200&v=4",
+                    link: "https://github.com/clash-verge-rev/clash-verge-rev",
+                },
+                {
+                    name: "FlClash",
+                    icon: "https://getflclash.net/wp-content/uploads/2024/10/logo-150x150.webp",
+                    link: "https://github.com/chen08209/FlClash",
+                },
+            ],
             items: {
                 "Clash Verge": true,
                 FlClash: true,
@@ -73,7 +108,18 @@ window.settings = {
         },
         {
             name: "Mac OS",
-            link: "https://apps.apple.com/app/id1234567890",
+            apps: [
+                {
+                    name: "Clash Verge",
+                    icon: "https://avatars.githubusercontent.com/u/152534467?s=200&v=4",
+                    link: "https://github.com/clash-verge-rev/clash-verge-rev",
+                },
+                {
+                    name: "FlClash",
+                    icon: "https://getflclash.net/wp-content/uploads/2024/10/logo-150x150.webp",
+                    link: "https://github.com/chen08209/FlClash",
+                },
+            ],
             items: {
                 "Clash Verge": true,
                 FlClash: true,
@@ -118,3 +164,14 @@ window.settings = {
 
 找到 `'return_url'` 修改 `=>` 后的内容  
 修改为：`'return_url' => $_SERVER["HTTP_ORIGIN"] . "/profile",`
+
+---
+
+## Nginx刷新后出现 404
+
+如果你直接刷新子页面（例如 /profile）出现 404，请在复写配置中加上：
+```
+location / {
+    try_files $uri $uri/ $uri.html /index.html;
+}
+```
