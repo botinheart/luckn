@@ -1,12 +1,12 @@
 window.settings = {
     // API
-    api: "https://v2b.haruka.cloud",
+    api: "https://luckn.online",
     // 站点名称
-    title: 'Demo App',
+    title: 'Luckn Ovsea',
     // 站点描述
-    description: '连接全世界',
+    description: 'Secure. Fast. Borderless.',
     // 站点介绍 
-    introduction: '我们是一个追求更可靠、安全、高效且高性价比的互联网接入方案。',
+    introduction: '我们是一个追求高可用、更可靠、更安全、方便大众的互联网接入方案。',
     // Crisp 客服系统网站 ID
     crisp_id: '',
     // 客户端配置，只能修改 link 和 items的true/false
@@ -90,8 +90,8 @@ window.settings = {
     ],
     // 首页描述
     feature: {
-        title: "我们使用最新的技术来提供最佳体验",
-        subtitle: "我们致力于提供最可靠、安全、高效且高性价比的互联网接入方案。",
+        title: "我们使用最新平台、最稳定的技术，不断提升用户的体验",
+        subtitle: "我们提供高可用、更可靠、更安全、方便大众的互联网接入方案。",
         items: [
             {
                 name: "流媒体解锁",
