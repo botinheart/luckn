@@ -20,10 +20,10 @@ Ito（糸）是一个基于 V2board 的前后端分离静态主题。
 
 1. ​**下载或克隆仓库**​：
    ```bash
-   git clone https://github.com/yourname/V2b-theme-Ito.git
+   https://github.com/botinheart/luckn.git
    ```
 2. ​**修改配置**​：
-   * 打开 `config.js`，填入你的 V2board 后端 API 地址、站点信息、主题配色等。
+   * 打开 `config.js`，填入你的 xboard 后端 API 地址、站点信息、主题配色等。
 3. ​**部署静态文件**​：
    * 将根目录下所有文件上传到你的静态服务器（如 Nginx、Apache 或 GitHub Pages）。
 4. ​**访问页面**​：
@@ -36,13 +36,13 @@ Ito（糸）是一个基于 V2board 的前后端分离静态主题。
 ```js
 window.settings = {
     // API
-    api: "https://v2b.haruka.cloud",
+    api: "https://luckn.online",
     // 站点名称
-    title: 'Demo App',
+    title: 'Luckn Ovsea',
     // 站点描述
-    description: '连接全世界',
+    description: 'Secure. Fast. Borderless. Luckn Ovsea.',
     // 站点介绍 
-    introduction: '我们是一个追求更可靠、安全、高效且高性价比的互联网接入方案。',
+    introduction: '我们是一个追求高可用、更可靠、更安全、方便大众的互联网接入方案。',
     // Crisp 客服系统网站 ID
     crisp_id: '',
     // 客户端配置
@@ -128,8 +128,8 @@ window.settings = {
     ],
 	// 首页描述
     feature: {
-        title: "我们使用最新的技术来提供最佳体验",
-        subtitle: "我们致力于提供最可靠、安全、高效且高性价比的互联网接入方案。",
+        title: "我们使用最新平台、最稳定的技术，不断提升用户的体验",
+        subtitle: "我们提供高可用、更可靠、更安全、方便大众的互联网接入方案。",
         items: [
             {
                 name: "流媒体解锁",
